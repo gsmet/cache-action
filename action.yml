@@ -17,7 +17,7 @@ runs:
   using: "composite"
   steps:
     - run: echo "${{ inputs.runs-on }}"
-      shell: /bin/bash
+      shell: bash
     - name: Cache using GitHub cache
       uses: actions/cache@v4
       if: ${{ inputs.runs-on != 'true' }}
